@@ -35,6 +35,11 @@ h6 {
   margin-bottom: 30px;
 }
 
+.text-profile,
+.text-profile-2 {
+  margin-top: 20px;
+}
+
 .about {
   background-color: #888c8d;
 }
