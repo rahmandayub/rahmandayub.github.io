@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+section {
+  padding-top: 100px;
+}
+
+h6 {
+  font-weight: bold;
+}
+
+.navbar {
+  background-color: #888c8d;
+}
+
+.home {
+  background-color: rgb(224, 221, 221);
+}
+
+.expertise {
+  display: inline-block;
+  color: white;
+  background-color: #888c8d;
+  border-radius: 20px;
+}
+
+.avatar {
+  border-radius: 20px;
+}
+
+.about {
+  background-color: #888c8d;
+}
+
+.contact,
+.edu,
+.exp {
+  background-color: #e0dddd;
+  border-radius: 15px;
+  border-width: 5px;
+  border-color: #888c8d;
+}
+
+.year {
+  display: inline-block;
+  color: white;
+  background-color: #888c8d;
+  border-radius: 20px;
+}
+
+.skill {
+  background-color: #e0dddd;
+  min-height: 600px;
+  padding-top: 50px;
+}
+
+.card-skill {
+  background-color: #888c8d;
+  border-radius: 15px;
+  border-width: 5px;
+  border-color: #e0dddd;
+}
+
+.mini-card {
+  background-color: #e0dddd;
+  border-radius: 10px;
+  margin-top: 10px;
+  height: 95px;
+}
+
+.icon {
+  background-color: white;
+  border-radius: 5px;
+  max-width: 60px;
+  min-width: 60px;
+}
+
+.card-body {
+  padding-left: 0px;
+}
