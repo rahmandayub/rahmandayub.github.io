@@ -402,6 +402,7 @@ footer {
 @media (max-width: 991px) {
     .header {
         padding: 2rem 9%;
+        max-width: 100%;
     }
     .section {
         padding: 10rem 3% 2rem;
@@ -425,6 +426,9 @@ footer {
         display: block;
     }
 
+    .header {
+        background: var(--bg-color);
+    }
     .navbar {
         position: absolute;
         top: 100%;
@@ -438,10 +442,8 @@ footer {
     .navbar.active {
         display: block;
         padding: 2rem 9%;
-        background: var(--bg-color-semi);
+        background: var(--bg-color);
         animation: fadeIn 0.5s ease-in-out;
-        -webkit-backdrop-filter: blur(8px);
-        backdrop-filter: blur(8px);
     }
 
     @keyframes fadeIn {
@@ -498,6 +500,13 @@ footer {
     .contact form .input-box input {
         width: 100%;
     }
+    .footer {
+        flex-direction: column-reverse;
+    }
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
+    }
 }
 
 @media (max-width: 365px) {
@@ -506,12 +515,5 @@ footer {
     }
     .about img {
         width: 90vw;
-    }
-    .footer {
-        flex-direction: column-reverse;
-    }
-    .footer p {
-        text-align: center;
-        margin-top: 2rem;
     }
 }

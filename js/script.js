@@ -30,11 +30,7 @@ window.onscroll = () => {
 
     // sticky navbar
     let header = document.querySelector('header');
-    if (window.scrollY > 0) {
-        header.classList.add('sticky');
-    } else {
-        header.classList.remove('sticky');
-    }
+    header.classList.toggle('sticky', window.scrollY > 100);
     // remove toffle icon navbar when click navbar link (scroll)
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
@@ -43,18 +39,26 @@ window.onscroll = () => {
 //scroll reveal
 ScrollReveal({
     reset: true,
-    distance: '80px',
     duration: 2000,
     delay: 200,
 });
 
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.home-content, .heading', {
+    origin: 'top',
+    distance: '80px',
+});
 ScrollReveal().reveal(
     '.home-img, .services-container, .portfolio-box, .contact form',
-    { origin: 'bottom' }
+    { origin: 'bottom', distance: '80px' }
 );
-ScrollReveal().reveal('.home-content h1, .about-img ', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content ', { origin: 'right' });
+ScrollReveal().reveal('.home-content h1, .about-img ', {
+    origin: 'top',
+    distance: '80px',
+});
+ScrollReveal().reveal('.home-content p, .about-content ', {
+    origin: 'bottom',
+    distance: '80px',
+});
 
 // typed js
 var typed = new Typed('.multiple-text', {
