@@ -62,7 +62,7 @@ ScrollReveal().reveal('.home-content p, .about-content ', {
 
 // typed js
 var typed = new Typed('.multiple-text', {
-    strings: ['Web Developer', 'UI/UX Designer'],
+    strings: ['Web Developer'],
     typeSpeed: 100,
     backSpeed: 100,
     backdelay: 1000,

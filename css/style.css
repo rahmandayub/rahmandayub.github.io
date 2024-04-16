@@ -13,11 +13,11 @@
 }
 
 :root {
-    --bg-color: #1f242d;
-    --bg-color-semi: #1f242dcc;
-    --second-bg-color: #323946;
+    --bg-color: #3f3a37;
+    --bg-color-semi: #3f3a37b4;
+    --second-bg-color: #574d46;
     --text-color: #fff;
-    --main-color: #0ef;
+    --main-color: #c9a783;
 }
 
 html {
@@ -264,6 +264,7 @@ span {
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
+    margin-bottom: 4rem;
 }
 
 .portfolio-box img {
@@ -490,6 +491,9 @@ footer {
     }
     .portfolio-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .portfolio-box:hover .portfolio-layer p {
+        display: none;
     }
 }
 
