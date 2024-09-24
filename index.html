@@ -3,245 +3,425 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- box icons -->
+        <title>Ayub Rahmanda - Portfolio</title>
+        <script src="https://cdn.tailwindcss.com"></script>
         <link
-            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
             rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         />
-        <!-- custom css -->
-        <link rel="stylesheet" href="css/style.css" />
-        <title>My Portfolio</title>
+        <link rel="stylesheet" href="style.css" />
     </head>
-    <body>
-        <!-- Header design -->
-        <header class="header">
-            <a href="#" class="logo">Portfolio</a>
-            <i class="bx bx-menu" id="menu-icon"></i>
-            <nav class="navbar">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#contact">Contact</a>
+    <body class="bg-gray-100 dark:bg-gray-900 font-sans">
+        <!-- Header -->
+        <header
+            class="bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-700 dark:to-blue-900 text-white shadow-md fixed w-full top-0 z-50"
+        >
+            <nav
+                class="container mx-auto px-6 py-3 flex justify-between items-center"
+            >
+                <a href="#" class="text-xl font-bold">Portfolio</a>
+                <div class="space-x-4">
+                    <a href="#home" id="nav-home" class="hover:text-blue-300"
+                        >Home</a
+                    >
+                    <a href="#about" id="nav-about" class="hover:text-blue-300"
+                        >About</a
+                    >
+                    <a
+                        href="#services"
+                        id="nav-services"
+                        class="hover:text-blue-300"
+                        >Services</a
+                    >
+                    <a
+                        href="#portfolio"
+                        id="nav-portfolio"
+                        class="hover:text-blue-300"
+                        >Portfolio</a
+                    >
+                    <a
+                        href="#contact"
+                        id="nav-contact"
+                        class="hover:text-blue-300"
+                        >Contact</a
+                    >
+                </div>
             </nav>
         </header>
 
-        <!-- home section -->
-        <section class="home" id="home">
-            <div class="home-content">
-                <h3>Hello, <span>It's Me</span></h3>
-                <h1>Ayub Rahmanda</h1>
-                <h3>And I'am a <span class="multiple-text"></span></h3>
-                <p>
-                    Computer science students who specialize in web development
-                    primarily utilize several programming languages like php,
-                    Javascript, python and are adept at HTML, CSS and MySQL
-                    databases. Responsible, meticulous, disciplined, creative,
-                    adaptive and always eager to learn new concepts.
-                </p>
-                <div class="social-media">
+        <!-- Main Content -->
+        <main>
+            <!-- Home Section -->
+            <section id="home" class="py-20 lg:min-h-screen">
+                <div
+                    class="container mx-auto px-6 flex flex-col md:flex-row items-center"
+                >
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h2
+                            class="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-2 animate-fade-in"
+                        >
+                            Hello, It's Me
+                        </h2>
+                        <h1
+                            class="text-5xl font-extrabold text-blue-600 dark:text-blue-400 mb-4 tracking-wider animate-fade-in"
+                        >
+                            Ayub Rahmanda
+                        </h1>
+                        <p
+                            class="text-xl text-gray-600 dark:text-gray-400 mb-6"
+                        >
+                            And I'm a
+                            <span
+                                class="text-blue-600 dark:text-blue-400 font-semibold"
+                            >
+                                Web Developer</span
+                            >
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-8">
+                            Computer science student specializing in web
+                            development, proficient in PHP, JavaScript, Python,
+                            HTML, CSS, and MySQL databases. Responsible,
+                            meticulous, disciplined, creative, adaptive, and
+                            always eager to learn new concepts.
+                        </p>
+                        <div class="flex space-x-4 mb-8">
+                            <a
+                                href="https://web.facebook.com/ayub.rachmanda.5"
+                                target="_blank"
+                                class="text-blue-600 hover:text-blue-800"
+                            >
+                                <svg
+                                    class="w-6 h-6"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="https://www.instagram.com/rahmandayub"
+                                target="_blank"
+                                class="text-pink-600 hover:text-pink-800"
+                            >
+                                <svg
+                                    class="w-6 h-6"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/ayub-rahmanda-8980b1165/"
+                                target="_blank"
+                                class="text-blue-800 hover:text-blue-900"
+                            >
+                                <svg
+                                    class="w-6 h-6"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                        <a
+                            href="./file/Resume_Ayub_Rahmanda_2024.pdf"
+                            class="inline-block bg-blue-600 dark:bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 dark:hover:bg-blue-600 transition duration-300 rounded-full"
+                        >
+                            Download CV
+                        </a>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img
+                            src="./img/home.png"
+                            alt="Ayub Rahmanda"
+                            class="rounded-full"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="py-20 bg-white dark:bg-gray-800">
+                <div
+                    class="container mx-auto px-6 flex flex-col md:flex-row items-center"
+                >
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <img
+                            src="img/about.png"
+                            alt="About Ayub Rahmanda"
+                            class="rounded-full shadow-xl"
+                        />
+                    </div>
+                    <div class="md:w-1/2 md:pl-12">
+                        <h2
+                            class="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4"
+                        >
+                            About Me
+                        </h2>
+                        <h3
+                            class="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-4"
+                        >
+                            Junior Web Developer
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-6">
+                            As a junior web developer adept in Laravel and
+                            Node.js, I apply my burgeoning skills to architect,
+                            develop, and optimize web applications with
+                            precision and creativity.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-6">
+                            Collaborating seamlessly within interdisciplinary
+                            teams, I contribute fresh perspectives and a
+                            tenacious work ethic, fostering an environment of
+                            innovation and growth.
+                        </p>
+                        <a
+                            href="#"
+                            class="inline-block bg-blue-600 dark:bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 dark:hover:bg-blue-600 transition duration-300 rounded-full"
+                            >Read More</a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="py-20 bg-gray-100 dark:bg-gray-900">
+                <div class="container mx-auto px-6">
+                    <h2
+                        class="text-3xl font-bold text-center text-gray-800 dark:text-gray-200 mb-12"
+                    >
+                        Our Services
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div
+                            class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300"
+                        >
+                            <i
+                                class="fas fa-code text-blue-600 dark:text-blue-400 text-3xl mb-4"
+                            ></i>
+                            <h3
+                                class="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4"
+                            >
+                                Web Developer
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">
+                                Specializing in Laravel and Node.js, we craft
+                                bespoke web applications tailored to your unique
+                                requirements.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300"
+                        >
+                            <i
+                                class="fas fa-code text-blue-600 dark:text-blue-400 text-3xl mb-4"
+                            ></i>
+                            <h3
+                                class="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4"
+                            >
+                                IT Support
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">
+                                Our dedicated team provides reliable solutions
+                                to keep your systems running smoothly.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300"
+                        >
+                            <i
+                                class="fas fa-code text-blue-600 dark:text-blue-400 text-3xl mb-4"
+                            ></i>
+                            <h3
+                                class="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4"
+                            >
+                                Graphic Design
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">
+                                Elevate your brand's visual identity with our
+                                creative graphic design services.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolio Section -->
+            <section id="portfolio" class="py-20 bg-white dark:bg-gray-800">
+                <div class="container mx-auto px-6">
+                    <h2
+                        class="text-3xl font-bold text-center text-gray-800 dark:text-gray-200 mb-12"
+                    >
+                        Latest Projects
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div
+                            class="relative overflow-hidden rounded-lg shadow-lg group"
+                        >
+                            <img
+                                src="./img/portfolio1.jpg"
+                                alt="Gemini WhatsApp"
+                                class="w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
+                            />
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"
+                            >
+                                <div class="text-center p-6">
+                                    <h3
+                                        class="text-xl font-semibold text-white mb-2"
+                                    >
+                                        Gemini WhatsApp
+                                    </h3>
+                                    <p class="text-gray-300 mb-4">
+                                        WhatsApp Chatbot project integrating
+                                        Gemini-Pro API for sophisticated virtual
+                                        assistance.
+                                    </p>
+                                    <a
+                                        href="https://github.com/rahmandayub/gemini-whatsapp-preview"
+                                        target="_blank"
+                                        class="inline-block bg-blue-600 dark:bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 dark:hover:bg-blue-600 transition duration-300 rounded-full"
+                                        >View Project</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="relative overflow-hidden rounded-lg shadow-lg group"
+                        >
+                            <img
+                                src="./img/portfolio2.jpg"
+                                alt="Gemini Telegram"
+                                class="w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
+                            />
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"
+                            >
+                                <div class="text-center p-6">
+                                    <h3
+                                        class="text-xl font-semibold text-white mb-2"
+                                    >
+                                        Gemini Telegram
+                                    </h3>
+                                    <p class="text-gray-300 mb-4">
+                                        Telegram Bot project employing
+                                        Gemini-Pro API for advanced NLP and
+                                        versatile functionality.
+                                    </p>
+                                    <a
+                                        href="https://t.me/symoenson_bot"
+                                        target="_blank"
+                                        class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300 rounded-full"
+                                        >View Project</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="py-20 bg-gray-100 dark:bg-gray-900">
+                <div class="container mx-auto px-6">
+                    <h2
+                        class="text-3xl font-bold text-center text-gray-800 dark:text-gray-200 mb-12"
+                    >
+                        Contact Me
+                    </h2>
+                    <div class="flex justify-center">
+                        <form
+                            action="https://formspree.io/f/myyrbrrd"
+                            method="POST"
+                            class="w-full max-w-lg bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg"
+                        >
+                            <div class="mb-6">
+                                <label
+                                    class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2"
+                                    >Your Name</label
+                                >
+                                <input
+                                    required
+                                    type="text"
+                                    placeholder="Your Name"
+                                    class="shadow appearance-none border rounded-full w-full py-2 px-4 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                />
+                            </div>
+                            <div class="mb-6">
+                                <label
+                                    class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2"
+                                    >Email</label
+                                >
+                                <input
+                                    required
+                                    type="email"
+                                    placeholder="you@example.com"
+                                    class="shadow appearance-none border rounded-full w-full py-2 px-4 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                />
+                            </div>
+                            <div class="mb-6">
+                                <label
+                                    class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2"
+                                    >Message</label
+                                >
+                                <textarea
+                                    required
+                                    rows="5"
+                                    placeholder="Your message..."
+                                    class="shadow appearance-none border rounded-md w-full py-2 px-4 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                ></textarea>
+                            </div>
+                            <button
+                                type="submit"
+                                class="bg-blue-600 dark:bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-700 dark:hover:bg-blue-600 transition duration-300 w-full"
+                            >
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer
+            class="bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-800 dark:to-gray-600 text-white py-6"
+        >
+            <div class="container mx-auto text-center">
+                <div class="flex justify-center space-x-6 mb-4">
                     <a
-                        href="https://web.facebook.com/ayub.rachmanda.5"
+                        href="https://github.com/rahmandayub"
                         target="_blank"
-                        ><i class="bx bxl-facebook"></i
-                    ></a>
-                    <a
-                        href="https://www.instagram.com/rahmandayub"
-                        target="_blank"
-                        ><i class="bx bxl-instagram"></i
+                        class="text-gray-400 hover:text-white dark:text-gray-500 dark:hover:text-white"
+                        ><i class="fab fa-github"></i
                     ></a>
                     <a
                         href="https://www.linkedin.com/in/ayub-rahmanda-8980b1165/"
                         target="_blank"
-                        ><i class="bx bxl-linkedin"></i
+                        class="text-gray-400 hover:text-white dark:text-gray-500 dark:hover:text-white"
+                        ><i class="fab fa-linkedin"></i
                     ></a>
                 </div>
-                <a href="./file/cv.pdf" class="btn">Download CV</a>
-            </div>
-            <div class="home-img">
-                <img src="./img/home.png" alt="home" />
-            </div>
-        </section>
-
-        <!-- about section -->
-        <section class="about" id="about">
-            <div class="about-img">
-                <img src="img/about.png" alt="about " />
-            </div>
-            <div class="about-content">
-                <h2 class="heading">About <span>Me</span></h2>
-                <h3>Junior Web Developer</h3>
-                <p>
-                    As a junior web developer adept in Laravel and Node.js, I
-                    apply my burgeoning skills to architect, develop, and
-                    optimize web applications with precision and creativity.
-                    Continuously honing my craft, I immerse myself in the
-                    intricacies of these frameworks, pushing boundaries and
-                    exploring new methodologies to deliver cutting-edge
-                    solutions. Collaborating seamlessly within interdisciplinary
-                    teams, I contribute fresh perspectives and a tenacious work
-                    ethic, fostering an environment of innovation and growth.
-                    With each project, I aspire to not only meet but surpass
-                    expectations, leaving an indelible mark on the digital
-                    landscape.
-                </p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-        </section>
-
-        <!-- services section -->
-        <section class="services" id="services">
-            <h2 class="heading">Our <span>Services</span></h2>
-            <div class="services-container">
-                <div class="services-box">
-                    <i class="bx bx-code-alt"></i>
-                    <h3>Web Developer</h3>
-                    <p>
-                        Specializing in Laravel and Node.js, we craft bespoke
-                        web applications tailored to your unique requirements.
-                        From conceptualization to deployment, we ensure seamless
-                        functionality, intuitive user experiences, and robust
-                        performance, empowering your digital presence to stand
-                        out in today's competitive landscape.
-                    </p>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-                <div class="services-box">
-                    <i class="bx bxs-devices"></i>
-                    <h3>IT Support</h3>
-                    <p>
-                        Our dedicated team provides reliable solutions to keep
-                        your systems running smoothly. From troubleshooting
-                        operating system issues on Linux and Windows PCs to
-                        optimizing server performance, we're committed to
-                        ensuring your technology functions seamlessly. Whether
-                        it's resolving technical glitches, enhancing network
-                        security, or implementing system upgrades, we're here to
-                        support your IT infrastructure needs.
-                    </p>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-                <div class="services-box">
-                    <i class="bx bxs-paint"></i>
-                    <h3>Graphic Design</h3>
-                    <p>
-                        Elevate your brand's visual identity with our creative
-                        graphic design services. From captivating logos and
-                        branding materials to engaging marketing collateral and
-                        user interfaces, our talented designers combine
-                        aesthetic flair with strategic thinking to deliver
-                        compelling visuals that resonate with your target
-                        audience and leave a lasting impression.
-                    </p>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- portfolio section -->
-        <section class="portfolio" id="portfolio">
-            <h2 class="heading">Latest <span>Project</span></h2>
-            <div class="portfolio-container">
-                <div class="portfolio-box">
-                    <img src="./img/portfolio1.jpg" alt="" />
-                    <div class="portfolio-layer">
-                        <h4>Gemini WhatsApp</h4>
-                        <p>
-                            The WhatsApp Chatbot project integrates the
-                            Gemini-Pro API to develop a sophisticated virtual
-                            assistant on the WhatsApp platform, leveraging
-                            Node.js and Express.js for seamless user
-                            interactions with advanced NLP techniques and
-                            personalized responses. It enhances user experience,
-                            streamlines operations, and facilitates proactive
-                            customer engagement, with future enhancements
-                            including voice integration and multi-platform
-                            expansion.
-                        </p>
-                        <a
-                            href="https://wa.me/6285752872285?text=Hello,%20I%20have%20a%20question%20about%20your%20services"
-                            target="_blank"
-                            ><i class="bx bx-link-external"></i
-                        ></a>
-                    </div>
-                </div>
-                <div class="portfolio-box">
-                    <img src="./img/portfolio2.jpg" alt="" />
-                    <div class="portfolio-layer">
-                        <h4>Gemini Telegram</h4>
-                        <p>
-                            The Telegram Bot project employs the Gemini-Pro API
-                            to create a chatbot for Telegram using Node.js and
-                            Express.js. It utilizes advanced NLP to understand
-                            queries, interfaces seamlessly with the API for
-                            versatile functionality, and maintains agility by
-                            eschewing traditional databases. With scalability
-                            and upcoming features like voice integration, it
-                            demonstrates chatbot adaptability in modern
-                            communication.
-                        </p>
-                        <a href="https://t.me/symoenson_bot" target="_blank"
-                            ><i class="bx bx-link-external"></i
-                        ></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- contact section -->
-        <section class="contact" id="contact">
-            <h2 class="heading">Contact <span>Me</span></h2>
-            <form action="https://formspree.io/f/myyrbrrd" method="POST">
-                <div class="input-box">
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Name"
-                        required
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        required
-                    />
-                </div>
-                <div class="input-box">
-                    <input
-                        type="number"
-                        name="number"
-                        placeholder="Phone (Optional)"
-                    />
-                    <input type="text" placeholder="Subject" required />
-                </div>
-                <textarea
-                    name="message"
-                    id=""
-                    cols="30"
-                    rows="10"
-                    placeholder="Your Message"
-                ></textarea>
-                <input type="submit" value="Send Message" class="btn" />
-            </form>
-        </section>
-
-        <!-- footer -->
-        <footer class="footer">
-            <div class="footer-text">
-                <p>
-                    Copyright &copy; 2024 by Ayub Rahmanda | All Rights
-                    Reserved.
-                </p>
-            </div>
-            <div class="footer-iconTop">
-                <a href="#home"><i class="bx bx-up-arrow-alt"></i> </a>
+                <p>&copy; 2024 by Ayub Rahmanda | All Rights Reserved.</p>
             </div>
         </footer>
-        <!-- scroll reveal -->
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <!-- typed js -->
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-        <!-- custom js -->
-        <script src="js/script.js"></script>
     </body>
+    <script src="./js/script.js"></script>
 </html>

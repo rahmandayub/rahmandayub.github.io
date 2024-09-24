@@ -1,70 +1,41 @@
-// toggle icon navbar
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+// Function to activate the navbar link based on the section in view
+document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-};
+    // Function to remove "active" class from all links
+    function removeActiveClasses() {
+        navLinks.forEach((link) => {
+            link.classList.remove('text-blue-300');
+        });
+    }
 
-// Script for the navigation bar
-let section = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
-
-window.onscroll = () => {
-    section.forEach((sec) => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
-
-        if (top >= offset && top < offset + height) {
-            navLinks.forEach((links) => {
-                links.classList.remove('active');
-                document
-                    .querySelector('header nav a[href*=' + id + ']')
-                    .classList.add('active');
-            });
+    // Function to add "active" class to the current section link
+    function addActiveClass(sectionId) {
+        const activeLink = document.querySelector(`a[href="#${sectionId}"]`);
+        if (activeLink) {
+            activeLink.classList.add('text-blue-300');
         }
+    }
+
+    // Use IntersectionObserver to detect which section is in view
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const sectionId = entry.target.getAttribute('id');
+                    removeActiveClasses();
+                    addActiveClass(sectionId);
+                }
+            });
+        },
+        {
+            threshold: 0.6, // Adjust this value to fine-tune when the active state should change
+        }
+    );
+
+    // Observe all sections
+    sections.forEach((section) => {
+        observer.observe(section);
     });
-
-    // sticky navbar
-    let header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 100);
-    // remove toffle icon navbar when click navbar link (scroll)
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');
-};
-
-//scroll reveal
-ScrollReveal({
-    reset: true,
-    duration: 2000,
-    delay: 200,
-});
-
-ScrollReveal().reveal('.home-content, .heading', {
-    origin: 'top',
-    distance: '80px',
-});
-ScrollReveal().reveal(
-    '.home-img, .services-container, .portfolio-box, .contact form',
-    { origin: 'bottom', distance: '80px' }
-);
-ScrollReveal().reveal('.home-content h1, .about-img ', {
-    origin: 'top',
-    distance: '80px',
-});
-ScrollReveal().reveal('.home-content p, .about-content ', {
-    origin: 'bottom',
-    distance: '80px',
-});
-
-// typed js
-var typed = new Typed('.multiple-text', {
-    strings: ['Web Developer'],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backdelay: 1000,
-    loop: true,
 });
